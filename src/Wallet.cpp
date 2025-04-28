@@ -850,6 +850,13 @@ std::pair<skey_t, pubkey_t> Wallet::get_farmer_keys(const uint32_t& index) const
 	throw std::logic_error("invalid wallet");
 }
 
+skey_t Wallet::get_private_key(const uint32_t& wallet_index, const uint32_t& address_index) const
+{
+    const auto wallet = get_wallet(wallet_index);
+    return wallet->get_private_key(address_index);
+}
+
+
 std::vector<std::pair<skey_t, pubkey_t>> Wallet::get_all_farmer_keys() const
 {
 	std::vector<std::pair<skey_t, pubkey_t>> res;
