@@ -167,5 +167,8 @@ module Wallet implements vnx.addons.HttpComponent {
 	
 	@Permission(permission_e.SPENDING)
 	vector<pair<skey_t, pubkey_t>> get_all_farmer_keys() const;
+
+	@Permission(permission_e.SPENDING)
+	skey_t get_private_key(uint wallet_index, uint address_index) const;
 	
 }
