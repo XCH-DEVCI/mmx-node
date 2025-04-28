@@ -179,6 +179,10 @@ public:
 		return keypairs.at(index);
 	}
 
+	skey_t get_private_key(const uint32_t index) const {
+	    return get_skey(index);
+	}
+
 	vnx::optional<std::pair<skey_t, pubkey_t>> find_keypair(const addr_t& addr) const
 	{
 		auto iter = keypair_map.find(addr);
