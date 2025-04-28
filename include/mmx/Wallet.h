@@ -141,6 +141,8 @@ protected:
 
 	std::vector<std::pair<skey_t, pubkey_t>> get_all_farmer_keys() const override;
 
+	skey_t get_private_key(const uint32_t& wallet_index, const uint32_t& address_index) const override;
+
 	account_info_t get_account(const uint32_t& index) const override;
 
 	std::vector<account_info_t> get_all_accounts() const override;
