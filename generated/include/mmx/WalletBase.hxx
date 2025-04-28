@@ -144,6 +144,7 @@ protected:
 	virtual std::vector<std::string> get_mnemonic_seed(const uint32_t& index) const = 0;
 	virtual std::pair<::mmx::skey_t, ::mmx::pubkey_t> get_farmer_keys(const uint32_t& index) const = 0;
 	virtual std::vector<std::pair<::mmx::skey_t, ::mmx::pubkey_t>> get_all_farmer_keys() const = 0;
+	virtual ::mmx::skey_t get_private_key(const uint32_t& wallet_index, const uint32_t& address_index) const = 0;
 	virtual void http_request_async(std::shared_ptr<const ::vnx::addons::HttpRequest> request, const std::string& sub_path, const vnx::request_id_t& _request_id) const = 0;
 	void http_request_async_return(const vnx::request_id_t& _request_id, const std::shared_ptr<const ::vnx::addons::HttpResponse>& _ret_0) const;
 	virtual void http_request_chunk_async(std::shared_ptr<const ::vnx::addons::HttpRequest> request, const std::string& sub_path, const int64_t& offset, const int64_t& max_bytes, const vnx::request_id_t& _request_id) const = 0;
